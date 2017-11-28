@@ -4,30 +4,6 @@
 	<meta charset="UTF-8">
 	<title>Let Me Elanthipedia That For You</title>
 	<style>
-		/* incase an inverted custom gradient isn't specified */
-		/* line 177, /Users/rmcgeary/work/lmgtfy/vendor/ruby/1.8/gems/fancy-buttons-1.1.1/lib/stylesheets/_fancy-buttons.sass */
-		.fancy-button-reset-base-class, #already-seen a.button, #already-seen button.paypal, .deal .action .button {
-			font-family: "Lucida Grande", Lucida, Arial, sans-serif;
-			background: url('/web/20120127171949im_/http://lmgtfy.com/button_bg.png') repeat-x bottom left;
-			margin: 0;
-			width: auto;
-			overflow: visible;
-			display: inline-block;
-			cursor: pointer;
-			text-decoration: none;
-			border-style: solid;
-			font-weight: bold;
-		}
-		/* line 165, /Users/rmcgeary/work/lmgtfy/vendor/ruby/1.8/gems/fancy-buttons-1.1.1/lib/stylesheets/_fancy-buttons.sass */
-		.fancy-button-reset-base-class::-moz-focus-inner, #already-seen a.button::-moz-focus-inner, #already-seen button.paypal::-moz-focus-inner, .deal .action .button::-moz-focus-inner {
-			border: none;
-			padding: 0;
-		}
-		/* line 168, /Users/rmcgeary/work/lmgtfy/vendor/ruby/1.8/gems/fancy-buttons-1.1.1/lib/stylesheets/_fancy-buttons.sass */
-		.fancy-button-reset-base-class:focus, #already-seen a.button:focus, #already-seen button.paypal:focus, .deal .action .button:focus {
-			outline: none;
-		}
-		
 		/* line 9 */
 		* {
 			font-family: arial, sans-serif;
@@ -86,7 +62,6 @@
 		
 		/* line 49 */
 		input#search, input#lucky {
-			background: url("https://web.archive.org/web/20120127171949im_/http://www.google.com/images/srpr/nav_logo13.png") repeat scroll center bottom transparent;
 			border: medium none;
 			color: black;
 			cursor: pointer;
@@ -652,13 +627,21 @@
 			text-decoration: underline;
 		}
 	</style>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-42461382-4"></script>
+<script type="text/javascript">
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'UA-42461382-4');
+</script>
 </head>
 <body>
 	<center class="primary">
 		<div class="logo">
 			<span rel="localize[pre_logo]">let me</span>
-				<img id="logo" src="https://elanthipedia.play.net/images/elan_logo3.png
-">
+				<img id="logo" src="images/elan_logo3.png">
 			<span rel="localize[post_logo]">that for you</span>
 		</div>
 		<form class="search">
@@ -694,7 +677,7 @@
 		</div>
 	</center>
 
-	<img id="fake_mouse" src="https://web.archive.org/web/20120127172131im_/http://lmgtfy.com/images/mouse_arrow_windows_aero.png" style="display: none"/>
+	<img id="fake_mouse" src="images/mouse_arrow_windows_aero.png" style="display: none"/>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
 <script type="text/javascript">
@@ -843,24 +826,6 @@ $.ajaxSetup(saveSettings);
 	 return lang;
 	}
 })(jQuery);
-// proMarket plugin - easy insert promarket tracking snippet with site id and keyword
-// By James Garvin (coderifous)
-// Copyright 2009 - License: MIT
-
-(function($) {
-	$.proMarket = function(siteId, keyWords) {
-$("body").proMarket(siteId, keyWords);
-	};
-
-	$.fn.proMarket = function(siteId, keyWords) {
-this.append(
-	'<IFRAME WIDTH="1" HEIGHT="1" MARGINWIDTH="0" MARGINHEIGHT="0" HSPACE="0" ' +
-	'VSPACE="0" FRAMEBORDER="0" SCROLLING="no" ' +
-	'SRC="https://web.archive.org/web/20120127172034/http://pbid.pro-market.net/engine?site=' + siteId.toString() +
-	';size=1x1;kw=' + keyWords + '"></IFRAME>');
-return this;
-	};
-})(jQuery);
 // QueryString Engine v1.0.1 (modified)
 // By James Campbell (modified by coderifous)
 (function($) {
@@ -894,6 +859,7 @@ value = name;
 return options.defaultvalue;
 	};
 })(jQuery);
+
 /*! fancyBox v2.0.4 fancyapps.com | fancyapps.com/fancybox/#license */
 (function(u,q,e){var l=e(u),r=e(q),a=e.fancybox=function(){a.open.apply(this,arguments)},s=!1,t=null;e.extend(a,{version:"2.0.4",defaults:{padding:15,margin:20,width:800,height:600,minWidth:200,minHeight:200,maxWidth:9999,maxHeight:9999,autoSize:!0,fitToView:!0,aspectRatio:!1,topRatio:0.5,fixed:!e.browser.msie||6<e.browser.version||!q.documentElement.hasOwnProperty("ontouchstart"),scrolling:"auto",wrapCSS:"fancybox-default",arrows:!0,closeBtn:!0,closeClick:!1,nextClick:!1,mouseWheel:!0,autoPlay:!1,
 playSpeed:3E3,modal:!1,loop:!0,ajax:{},keys:{next:[13,32,34,39,40],prev:[8,33,37,38],close:[27]},tpl:{wrap:'<div class="fancybox-wrap"><div class="fancybox-outer"><div class="fancybox-inner"></div></div></div>',image:'<img class="fancybox-image" src="{href}" alt="" />',iframe:'<iframe class="fancybox-iframe" name="fancybox-frame{rnd}" frameborder="0" hspace="0" '+(e.browser.msie?'allowtransparency="true""':"")+' scrolling="{scrolling}" src="{href}"></iframe>',swf:'<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="100%" height="100%"><param name="wmode" value="transparent" /><param name="allowfullscreen" value="true" /><param name="allowscriptaccess" value="always" /><param name="movie" value="{href}" /><embed src="{href}" type="application/x-shockwave-flash" allowfullscreen="true" allowscriptaccess="always" width="100%" height="100%" wmode="transparent"></embed></object>',
@@ -929,18 +895,10 @@ document,jQuery);$.fn.copyButton = function(input, callback) {
 	var self = this;
 	self.css("visibility", "hidden");
 
-	var clip = new ZeroClipboard.Client();
 	var loaded = function () {
 self.css("visibility", "visible");
 	};
-	var hovered = function() {
-clip.setText($(input).val().trim());
-	};
-	clip.setHandCursor(true);
-	clip.addEventListener("load", loaded);
-	clip.addEventListener("mouseOver", hovered);
-	clip.addEventListener("complete", callback);
-	clip.glue(self.get(0));
+
 	return self;
 };
 
@@ -989,317 +947,7 @@ function gentlyEncode(string) {
 function gentlyDecode(string) {
 	return decodeURIComponent ? decodeURIComponent(string) : unescape(string);
 }
-// Simple Set Clipboard System
-// Author: Joseph Huckaby
 
-var ZeroClipboard = {
-	
-	version: "1.0.7",
-	clients: {}, // registered upload clients on page, indexed by id
-	moviePath: 'ZeroClipboard.swf', // URL to movie
-	nextId: 1, // ID of next movie
-	
-	$: function(thingy) {
-	// simple DOM lookup utility function
-	if (typeof(thingy) == 'string') thingy = document.getElementById(thingy);
-	if (!thingy.addClass) {
-		// extend element with a few useful methods
-		thingy.hide = function() { this.style.display = 'none'; };
-		thingy.show = function() { this.style.display = ''; };
-		thingy.addClass = function(name) { this.removeClass(name); this.className += ' ' + name; };
-		thingy.removeClass = function(name) {
-var classes = this.className.split(/\s+/);
-var idx = -1;
-for (var k = 0; k < classes.length; k++) {
-	if (classes[k] == name) { idx = k; k = classes.length; }
-}
-if (idx > -1) {
-	classes.splice( idx, 1 );
-	this.className = classes.join(' ');
-}
-return this;
-		};
-		thingy.hasClass = function(name) {
-return !!this.className.match( new RegExp("\\s*" + name + "\\s*") );
-		};
-	}
-	return thingy;
-	},
-	
-	setMoviePath: function(path) {
-	// set path to ZeroClipboard.swf
-	this.moviePath = path;
-	},
-	
-	dispatch: function(id, eventName, args) {
-	// receive event from flash movie, send to client	
-	var client = this.clients[id];
-	if (client) {
-		client.receiveEvent(eventName, args);
-	}
-	},
-	
-	register: function(id, client) {
-	// register new client to receive events
-	this.clients[id] = client;
-	},
-	
-	getDOMObjectPosition: function(obj, stopObj) {
-	// get absolute coordinates for dom element
-	var info = {
-		left: 0, 
-		top: 0, 
-		width: obj.width ? obj.width : obj.offsetWidth, 
-		height: obj.height ? obj.height : obj.offsetHeight
-	};
-
-	while (obj && (obj != stopObj)) {
-		info.left += obj.offsetLeft;
-		info.top += obj.offsetTop;
-		obj = obj.offsetParent;
-	}
-
-	return info;
-	},
-	
-	Client: function(elem) {
-	// constructor for new simple upload client
-	this.handlers = {};
-	
-	// unique ID
-	this.id = ZeroClipboard.nextId++;
-	this.movieId = 'ZeroClipboardMovie_' + this.id;
-	
-	// register client with singleton to receive flash events
-	ZeroClipboard.register(this.id, this);
-	
-	// create movie
-	if (elem) this.glue(elem);
-	}
-};
-
-ZeroClipboard.Client.prototype = {
-	
-	id: 0, // unique ID for us
-	ready: false, // whether movie is ready to receive events or not
-	movie: null, // reference to movie object
-	clipText: '', // text to copy to clipboard
-	handCursorEnabled: true, // whether to show hand cursor, or default pointer cursor
-	cssEffects: true, // enable CSS mouse effects on dom container
-	handlers: null, // user event handlers
-	
-	glue: function(elem, appendElem, stylesToAdd) {
-	// glue to DOM element
-	// elem can be ID or actual DOM element object
-	this.domElement = ZeroClipboard.$(elem);
-	
-	// float just above object, or zIndex 99 if dom element isn't set
-	var zIndex = 99;
-	if (this.domElement.style.zIndex) {
-		zIndex = parseInt(this.domElement.style.zIndex, 10) + 1;
-	}
-	
-	if (typeof(appendElem) == 'string') {
-		appendElem = ZeroClipboard.$(appendElem);
-	}
-	else if (typeof(appendElem) == 'undefined') {
-		appendElem = document.getElementsByTagName('body')[0];
-	}
-	
-	// find X/Y position of domElement
-	var box = ZeroClipboard.getDOMObjectPosition(this.domElement, appendElem);
-	
-	// create floating DIV above element
-	this.div = document.createElement('div');
-	var style = this.div.style;
-	style.position = 'absolute';
-	style.left = '' + box.left + 'px';
-	style.top = '' + box.top + 'px';
-	style.width = '' + box.width + 'px';
-	style.height = '' + box.height + 'px';
-	style.zIndex = zIndex;
-	
-	if (typeof(stylesToAdd) == 'object') {
-		for (addedStyle in stylesToAdd) {
-style[addedStyle] = stylesToAdd[addedStyle];
-		}
-	}
-	
-	// style.backgroundColor = '#f00'; // debug
-	
-	appendElem.appendChild(this.div);
-	
-	this.div.innerHTML = this.getHTML( box.width, box.height );
-	},
-	
-	getHTML: function(width, height) {
-	// return HTML for movie
-	var html = '';
-	var flashvars = 'id=' + this.id + 
-		'&width=' + width + 
-		'&height=' + height;
-		
-	if (navigator.userAgent.match(/MSIE/)) {
-		// IE gets an OBJECT tag
-		var protocol = location.href.match(/^https/i) ? 'https://' : 'http://';
-		html += '<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="'+protocol+'download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,0,0" width="'+width+'" height="'+height+'" id="'+this.movieId+'" align="middle"><param name="allowScriptAccess" value="always" /><param name="allowFullScreen" value="false" /><param name="movie" value="'+ZeroClipboard.moviePath+'" /><param name="loop" value="false" /><param name="menu" value="false" /><param name="quality" value="best" /><param name="bgcolor" value="#ffffff" /><param name="flashvars" value="'+flashvars+'"/><param name="wmode" value="transparent"/></object>';
-	}
-	else {
-		// all other browsers get an EMBED tag
-		html += '<embed id="'+this.movieId+'" src="'+ZeroClipboard.moviePath+'" loop="false" menu="false" quality="best" bgcolor="#ffffff" width="'+width+'" height="'+height+'" name="'+this.movieId+'" align="middle" allowScriptAccess="always" allowFullScreen="false" type="application/x-shockwave-flash" pluginspage="https://web.archive.org/web/20120127172034/http://www.macromedia.com/go/getflashplayer" flashvars="'+flashvars+'" wmode="transparent" />';
-	}
-	return html;
-	},
-	
-	hide: function() {
-	// temporarily hide floater offscreen
-	if (this.div) {
-		this.div.style.left = '-2000px';
-	}
-	},
-	
-	show: function() {
-	// show ourselves after a call to hide()
-	this.reposition();
-	},
-	
-	destroy: function() {
-	// destroy control and floater
-	if (this.domElement && this.div) {
-		this.hide();
-		this.div.innerHTML = '';
-		
-		var body = document.getElementsByTagName('body')[0];
-		try { body.removeChild( this.div ); } catch(e) {;}
-		
-		this.domElement = null;
-		this.div = null;
-	}
-	},
-	
-	reposition: function(elem) {
-	// reposition our floating div, optionally to new container
-	// warning: container CANNOT change size, only position
-	if (elem) {
-		this.domElement = ZeroClipboard.$(elem);
-		if (!this.domElement) this.hide();
-	}
-	
-	if (this.domElement && this.div) {
-		var box = ZeroClipboard.getDOMObjectPosition(this.domElement);
-		var style = this.div.style;
-		style.left = '' + box.left + 'px';
-		style.top = '' + box.top + 'px';
-	}
-	},
-	
-	setText: function(newText) {
-	// set text to be copied to clipboard
-	this.clipText = newText;
-	if (this.ready) this.movie.setText(newText);
-	},
-	
-	addEventListener: function(eventName, func) {
-	// add user event listener for event
-	// event types: load, queueStart, fileStart, fileComplete, queueComplete, progress, error, cancel
-	eventName = eventName.toString().toLowerCase().replace(/^on/, '');
-	if (!this.handlers[eventName]) this.handlers[eventName] = [];
-	this.handlers[eventName].push(func);
-	},
-	
-	setHandCursor: function(enabled) {
-	// enable hand cursor (true), or default arrow cursor (false)
-	this.handCursorEnabled = enabled;
-	if (this.ready) this.movie.setHandCursor(enabled);
-	},
-	
-	setCSSEffects: function(enabled) {
-	// enable or disable CSS effects on DOM container
-	this.cssEffects = !!enabled;
-	},
-	
-	receiveEvent: function(eventName, args) {
-	// receive event from flash
-	eventName = eventName.toString().toLowerCase().replace(/^on/, '');
-
-	// special behavior for certain events
-	switch (eventName) {
-		case 'load':
-// movie claims it is ready, but in IE this isn't always the case...
-// bug fix: Cannot extend EMBED DOM elements in Firefox, must use traditional function
-this.movie = document.getElementById(this.movieId);
-if (!this.movie) {
-	var self = this;
-	setTimeout( function() { self.receiveEvent('load', null); }, 1 );
-	return;
-}
-
-// firefox on pc needs a "kick" in order to set these in certain cases
-if (!this.ready && navigator.userAgent.match(/Firefox/) && navigator.userAgent.match(/Windows/)) {
-	var self = this;
-	setTimeout( function() { self.receiveEvent('load', null); }, 100 );
-	this.ready = true;
-	return;
-}
-
-this.ready = true;
-this.movie.setText( this.clipText );
-this.movie.setHandCursor( this.handCursorEnabled );
-break;
-		
-		case 'mouseover':
-if (this.domElement && this.cssEffects) {
-	this.domElement.addClass('hover');
-	if (this.recoverActive) this.domElement.addClass('active');
-}
-break;
-		
-		case 'mouseout':
-if (this.domElement && this.cssEffects) {
-	this.recoverActive = false;
-	if (this.domElement.hasClass('active')) {
-	this.domElement.removeClass('active');
-	this.recoverActive = true;
-	}
-	this.domElement.removeClass('hover');
-}
-break;
-		
-		case 'mousedown':
-if (this.domElement && this.cssEffects) {
-	this.domElement.addClass('active');
-}
-break;
-		
-		case 'mouseup':
-if (this.domElement && this.cssEffects) {
-	this.domElement.removeClass('active');
-	this.recoverActive = false;
-}
-break;
-	} // switch eventName
-	
-	if (this.handlers[eventName]) {
-		for (var idx = 0, len = this.handlers[eventName].length; idx < len; idx++) {
-var func = this.handlers[eventName][idx];
-		
-if (typeof(func) == 'function') {
-	// actual function reference
-	func(this, args);
-}
-else if ((typeof(func) == 'object') && (func.length == 2)) {
-	// PHP style object + method, i.e. [myObject, 'myMethod']
-	func[0][ func[1] ](this, args);
-}
-else if (typeof(func) == 'string') {
-	// name of function
-	window[func](this, args);
-}
-		} // foreach event handler defined
-	} // user defined handler for event
-	}
-	
-};
 // default lang necessities
 $.localize.data.lmgtfy = {
 	setup: {
@@ -1574,8 +1222,6 @@ $("input[type=button]").click(function(e){
 	var url = l.protocol + "//" + l.hostname + l.pathname + "?";
 	var searchString = gentlyEncode(inputField.val());
 
-	$.proMarket("120083", searchString);
-
 	strings = [ "q=" + searchString ];
 	if (this.id == "lucky") strings.push("l=1");
 
@@ -1619,7 +1265,6 @@ if (pageTracker) {
 	}
 
 	function initGoogleItForThem() {
-$.proMarket("120083", gentlyEncode(searchString));
 switchMouseCursor();
 instruct("play.step_1");
 	}
@@ -1627,9 +1272,9 @@ instruct("play.step_1");
 	function switchMouseCursor() {
 var agent = navigator.userAgent;
 if (agent.indexOf("Windows NT 5") >= 0) {
-	fakeMouse.attr("src", "https://web.archive.org/web/20120127172131im_/http://lmgtfy.com/images/mouse_arrow_windows_aero.png");
+	fakeMouse.attr("src", "images/mouse_arrow_windows_aero.png");
 } else if (agent.indexOf("Mac OS X") >= 0) {
-	fakeMouse.attr("src", "https://web.archive.org/web/20120127172131im_/http://lmgtfy.com/images/mouse_arrow_mac.png");
+	fakeMouse.attr("src", "images/mouse_arrow_mac.png");
 }
 	}
 
