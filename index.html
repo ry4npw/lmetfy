@@ -810,7 +810,6 @@ $(function(){
 	var linkMessage	= $("#link_message");
 
 	initializeLocalization();
-	initializeAboutLink();
 	initializeControls();
 
 	if (searchString) {
@@ -825,15 +824,6 @@ if (location.hash == "#seen") {
 getTheSearchTerms();
 	}
 
-	function initializeAboutLink() {
-$("a[name=about]").click(function() {
-	$("#about").toggle();
-	$("html,body").animate({ scrollTop: $("#about").offset().top }, 1000);
-	return false;
-});
-linkifyAbout();
-	}
-
 	function initializeControls() {
 inputLink.click(function() { $(this).select(); });
 $("#link").one("mouseover", function(){ $("#callout").show(); });
@@ -841,7 +831,7 @@ $("#go").click(function(){ window.location.href = inputLink.val(); return false;
 $("#reset").click(function(){ resetTheUrl($(this).attr("url")); return false; });
 $("#shorten").click(function(){
 	linkStatus("link.fetching", 0, true);
-	$.getJSON("https://web.archive.org/web/20120127172034/http://api.bitly.com/v3/shorten?format=json&login=lmgtfy&apiKey=R_f0a33bc297052f6faea2a898b80662f0&longUrl=" + gentlyEncode(inputLink.val()), function(data) {
+	$.getJSON("https://api.bitly.com/v3/shorten?format=json&login=lmgtfy&apiKey=R_f0a33bc297052f6faea2a898b80662f0&longUrl=" + gentlyEncode(inputLink.val()), function(data) {
 inputLink.val(data.data.url).focus().select();
 linkStatus("link.fetching", 1500);
 	});
@@ -865,7 +855,6 @@ var localize_opts = {
 	skipLanguage: /^en-US/,
 	callback: function(data, defaultCallback) {
 defaultCallback(data);
-linkifyAbout();
 if (data.lucky_button === null) $("#lucky").parent().parent().hide();
 	},
 	finish: function(data){
@@ -933,12 +922,6 @@ return null;
 	function langString(langkey) {
 var keys = langkey.split(/\./);
 return keys.length == 1 ? $.localize.data.lmgtfy[keys[0]] : $.localize.data.lmgtfy[keys[0]][keys[1]];
-	}
-
-	function linkifyAbout() {
-$("#about p").each(function() {
-	$(this).html($(this).text().replace(/(@([a-zA-Z0-9_]+))/g, '<a href="https://web.archive.org/web/20120127172034/http://twitter.com/$2">$1</a>'));
-});
 	}
 
 	function instruct(langkey) {
