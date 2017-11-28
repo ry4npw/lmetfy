@@ -420,7 +420,7 @@
 			</span>
 			<span class="button_wrapper">
 				<div class="inner">
-					<input id="lucky" rel="localize[lucky_button]" type="button" value="I'm Feeling Lucky"/>
+					<input id="lucky" rel="localize[lucky_button]" type="button" value="Containing..."/>
 				</div>
 			</span>
 		</form>
@@ -1049,10 +1049,14 @@ function redirect(){
 
 	var google = $.localize.data.lmgtfy.urls.search;
 	if (button.attr("id") == $("#lucky").attr("id")) {
-google = $.localize.data.lmgtfy.urls.lucky_search;
+		google = $.localize.data.lmgtfy.urls.lucky_search;
 	}
 
-page = google + gentlyEncode(searchString);
+	page = google + gentlyEncode(searchString);
+
+	if (button.attr("id") == $("#lucky").attr("id")) {
+		page += "&fulltext=1"
+	}
 
 	window.location.href = page;
 }
